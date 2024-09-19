@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>
+        IndividualProject_23796349
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="23796349.css">
+    </head>
+    <Body>
+       <header>
+            <h1>CITS5505 - Individual Project</h1>
+            <h2>Adharsh Sundaram</h2>
+       </header>
+       <div class="navbar">
+            <a href="#section1">Working of HyperLinks</a>
+            <a href="#section2">History of HyperLinks</a>
+            <a href="#section3">Portfolio</a>
+            <a href="#references">References</a>
+       </div>
+       <!--------------------------------------------------------------------------------Beginning of Section1--------------------------------------------------------------------------------------------------------------->
+       <h2 id="section1"> 1.The Working of HyperLinks</h2>
+       <div class="s1">
+            <hr class="sec_hr">
+            <h3>Introduction:</h3>
+            <p>
+                Hyperlinks, often simply called links, are a foundational concept of the World Wide Web, allowing users to navigate from
+                one web resource to another with a single click. They are implemented in HTML documents as anchor tags ('&lt;a&gt;'), which 
+                can be styled and scripted with CSS and JavaScript for various interactive experiences. When a user clicks on a hyperlink,
+                the browser sends an HTTP request to the server hosting the target resource, which then responds with the content of that
+                resource, such as a web page, image, or document. Hyperlinks can also be used to navigate to specific parts of a 
+                web page using anchor tags with the 'id' attribute. 
+                For instance, if a section of a page has an 'id' of 'step1', a hyperlink created with 
+                '&lt;a href="#step1"&gt; Go to Step 1 &lt;/a&gt;' will scroll the browser window to that section of the page when clicked.
+                This request-response cycle is the fundamental operation of the web, 
+                allowing users to retrieve resources from servers located all around the world.
+            </p>
+            <p>
+                Infact the Navigation bar at the top works based on HyperLinks!
+            </p>
+            <p>
+                Shown below is a simple in-page demonstration of how HyperLinks work.
+        
+            </p>
+            <div id="div_e1_flex">
+                <img id="intro_img" src="https://images7.memedroid.com/images/UPLOADED917/5b297efce0fa0.jpeg" alt="Image" height="500" width="450">
+                <div id="div_e1">
+                    <h3>Simple demonstration of HyperLinks</h3>
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a class="e1" href="#step1">Go to Step 1</a></li>
+                        <li><a class="e1" href="#step2">Go to Step 2</a></li>
+                    </ul>
+    
+                    <div id="step1">
+                        <h3>Step 1</h3>
+                        <p>This is Step 1. You can click on the hyperlink in the menu to come to this step.</p>
+                        <a class = "e1" href="#top">Back to top</a>
+                    </div>
+    
+                    <div id="step2">
+                        <h3>Step 2</h3>
+                        <p>This is Step 2. You can click on the hyperlink in the menu to come to this step.</p>
+                        <a class = "e1" href="#top">Back to top</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="sec_hr">
+            
+            <h3>Developer's Perspective:</h3>
+            <div id="div_dev_flex">
+                <img id="hl_img" src="https://www.computerhope.com/issues/pictures/html-link.png" alt="Image" height="250" width="650">
+                <div id="div_dev">
+                    <p >For web developers, understanding hyperlinks is crucial because they affect not only navigation but also the
+                        architecture of the web. Good hyperlink practices can improve the user experience, enhance SEO (Search Engine 
+                        Optimization), and contribute to the overall structure and discoverability of web content.
+                        Creating a hyperlink involves setting the "href " attribute to an anchor tag that specifies the URL
+                        of that resource to which the link points. In addition, developers can use the "target" attribute to control which window
+                        or tab the new document will open in, for example whether it will appear in the same window or in a new one. Additionally,
+                        the link attribute can specify the relationship between linked resources, such as indicating whether the link is to an external
+                        website or a download.
+                    </p>
+                    <p>
+                        Styling links is typically done with CSS. Developers can change the color, font, size, and more to make the link fit with the 
+                        rest of the website’s design. They can also style different states of a link (like hover, active, visited) to provide visual 
+                        feedback to users.
+                    </p>
+                    <p>
+                        JavaScript can be used to add interactivity to links. For instance, developers can create a script that shows a confirmation 
+                        dialog when a link is clicked, or that fetches the linked content in the background and updates the current page without a full page reload 
+                        (commonly known as AJAX). A simple AJAX implementation is shown in the Advancement sub-section.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <hr class="sec_hr">
+            <div id="div_sb_flex">
+                <div id="div_sb">
+                    <h3>Browsers - side:</h3>
+                    <p>
+                        Browsers interpret hyperlinks by parsing the HTML document, identifying anchor tags, and rendering them as clickable elements.
+                        Modern browsers also provide features like the ability to open links in new tabs or windows, bookmark links, and check the security
+                        of the linked resources. When the hyperlink is activated, the browser parses the "href"
+                        value and sends an HTTP GET request to the specified URL. This request may contain additional headers, such as "Referer", 
+                        which indicates the URL of the link page, and "User-Agent", which provides information about the browser and operating system.
+                    </p>
+                    <p>
+                        There are 7 steps that happen when a user clicks on a link in the browser:
+                    </p>
+                    <ol>
+                        <li>Request</li>
+                        <li>DNS Lookup</li>
+                        <li>Connection</li>
+                        <li>Send and Wait</li>
+                        <li>Response</li>
+                        <li>Rendering</li>
+                        <li>JavaScript Execution (if any)</li>
+                    </ol>
+                    <br>                
+                    <h3>Server-side:</h3>
+                    <p>
+                        The server on the other end receives the HTTP request and determines the appropriate response based on the URL and other factors.
+                        This may include returning an HTML page, starting a file download, or redirecting to another URL. Once the server has finished processing the request,
+                        it sends a response back to the browser. The browser then renders the server's response by updating
+                        the current view or opening a new hyperlink as directed by the attributes.
+                    </p>
+                    <p>
+                        There are 5 steps that the server performs:
+                    </p>
+                    <ol>
+                        <li>Receive Request</li>
+                        <li>Parse Request</li>
+                        <li>Handle Request</li>
+                        <li>Generate Response</li>
+                        <li>Send Response</li>
+                    </ol>
+                    <br>
+                </div>
+                <img id="bs_img" src="https://www.knownhost.com/blog/wp-content/uploads/2019/02/Dns.jpg.webp" alt="Image" height="600" width="750"> 
+            </div>
+            <hr class="sec_hr">
+            
+            <h3>Advancement:</h3>
+            <p>
+                The implementation of hyperlinks has evolved over time as the web has evolved standards and browsers capabilities.
+                Modern web applications often use JavaScript to improve the behaviour of hyperlinks, allowing dynamic content to be loaded using
+                techniques such as AJAX without having to refresh the entire page. This has led to a smoother user experience and the development
+                of single-page applications where the majority of interactions occur within a single HTML document.<br><br>A simple AJAX implementation is shown below!
+            </p>
+            <h3>Simple AJAX Example:</h3>
+            <p>Click the button below to get information about my favourite Valorant character from a Public API.</p>
+            <button id=simAJAX type="button" onclick="simpleAJAX()">Request Data</button>
+            <p id="agentName"></p>
+            <p id="agentDesc"></p>
+            <img id ="agentImg" src="asd" alt="asd" height="256" width="256" hidden>
+            <hr class="sec_hr">
+            
+            <h3>Conclusion:</h3>
+            <p>
+                In summary, hyperlinks are an essential part of web navigation and functionality, acting as a connector. . . 
+                The fabric of the internet. They allow web developers to create networked content that is easily accessible to users. 
+                Thanks to the sophisticated use of these links by modern browsers, the users can explore the site intuitively and efficiently. 
+                A simple click on a link is based on the complex interaction of HTML, HTTP, and browser technology, illustrating the interplay 
+                between web development and user experience. While the act of creating a hyperlink may be simple, using them effectively in web
+                development is a multifaceted task that requires a broad and deep understanding of many areas. From technical knowledge to design
+                aesthetics, from user experience principles to accessibility standards, each aspect plays a vital role in making the humble hyperlink
+                 a powerful tool in the world of web development.
+            </p>
+            <hr class="sec_hr">
+        </div>
+        <hr class="sec_hr">
+        <!------------------------------------------------------------------------------------------------End of section1------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------Beginning of Section2------------------------------------------------------------------------------------------->
+        <h2 id="section2"> 2.The History of HyperLinks</h2>
+        <div class="s2">
+            <hr class="sec_hr">
+            <h3>The Beginning of HyperLinks:</h3>
+            <p>
+                The history of hyperlinks is a fascinating journey through the evolution of the web and digital communication. The concept of hyperlinks
+                predates the internet, with the term "hyperlink" being coined by Ted Nelson (person in the left image) in 1965 as part of Project Xanadu. Nelson was inspired by Vannevar
+                Bush's essay "As We May Think," which envisioned a machine called the Memex, designed for linking information across various documents.
+            </p>   
+                <br><br>
+                <div class="his_div">
+                    <img id="Ted" src="https://hisaac.net/assets/posts/project-xanadu/ted-nelson-at-computer.jpg" alt="TedNelson">
+                    <img id="Tim" src="https://www.bbvaopenmind.com/wp-content/uploads/2015/06/BBVA-OpenMind-tim-berners-lee-1-1.jpg" alt="TimBL" height="480" width="670">
+                </div>
+                <br><br>
+            <p>
+                Hyperlinks, or simply links, are digital references that allow users to navigate from one piece of information to another with a single click or tap.
+                This seemingly simple action is the cornerstone of the World Wide Web, created by Tim Berners-Lee (person in the right image) in 1989 at CERN. Berners-Lee's vision of a global 
+                hypertext system became a reality with the introduction of the HTML language, which included the ability to create links to other documents.
+                The first web browser, also developed by Berners-Lee, was called WorldWideWeb and later renamed Nexus. It allowed users to view and navigate hypertext documents,
+                which were interconnected through hyperlinks. This innovation laid the groundwork for all future web browsers, which continue to use hyperlinks as a fundamental feature.
+            </p>
+            <hr class="sec_hr">
+            <h3>Technological Evolution:</h3>
+            <p>Hyperlinks have evolved significantly since their inception. Initially, they were used primarily to link between different documents. Over time, their use expanded to include 
+                linking to specific parts of documents, known as anchor links, and to external resources, such as images, videos, and other multimedia content. The development of JavaScript 
+                and dynamic HTML (DHTML) in the mid-1990s further expanded the capabilities of hyperlinks, enabling interactive and animated web experiences.
+                <br><br>
+                The four major evolutions are listed below:
+            </p>
+            <div class="two_divs">
+                <div class="div_evo_left">
+                    <h3>1. Text-Based Hyperlinks (Late 1960s - Early 1990s):</h3>
+                    <img src="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks/link-2.png" alt="Image">
+                    <p>
+                        The concept of hyperlinks was first introduced by Ted Nelson in the late 1960s as part of his Project Xanadu. However,
+                        it wasn’t until the advent of text-based internet protocols like Gopher and Usenet in the 1980s and early 1990s that hyperlinks started to become widely used. These were
+                        simple text-based links that could be used to navigate between different documents or sections of a document.
+                        <br>
+                        The simple example at "Section 1" and the Navigation bar are based on Text-Based Hyperlinks.
+                    </p>
+                </div>
+                <div class="div_evo_right">
+                    <h3>2. HTML and the World Wide Web (1990s - Present):</h3>
+                    <img src="https://www.teach-ict.com/gcse_new/software/web_design/miniweb/images/hyperlinks.jpg" alt="Image">
+                    <p>
+                        The real revolution in hyperlink technology came with the invention of the World Wide Web by Tim Berners-Lee in 1989. 
+                        HTML (HyperText Markup Language) allowed for the creation of hyperlinks using the &lt;a&gt; tag. This made it possible to link not 
+                        just to different parts of the same document, but to entirely different documents, creating a web of interconnected information.
+                    </p>
+                </div>
+            </div> 
+            <div class="two_divs">
+                <div class="div_evo_left">
+                    <h3>3. Dynamic Links and AJAX (2000s - Present): </h3>
+                    <img src="https://derivadow.com/wp-content/uploads/2007/01/ajax.png?w=506&h=309" alt="Image">
+                    <p>
+                        With the rise of dynamic web content and technologies like JavaScript, XML, and later JSON, hyperlinks became even more powerful.
+                        AJAX (Asynchronous JavaScript and XML) allows for the creation of links that can update a part of a web page without needing to reload the entire page.
+                        This has enabled the creation of much more interactive and responsive web applications.
+                    </p>
+                </div>
+                <div class="div_evo_right">
+                    <h3>4. Deep Links and App Links (2010s - Present):</h3>
+                    <img src="https://www.helpshift.com/wp-content/uploads/2023/10/deep.jpg" alt="Image">
+                    <p>
+                        With the rise of mobile apps, a new form of hyperlink has emerged: deep links. These are links that can open a specific page or section within a mobile app,
+                        providing a seamless user experience across websites and apps. Similarly, app links allow web URLs to open content directly in an app if it’s installed.
+                    </p>
+                </div>
+            </div>
+            <p>
+                The future of hyperlinks may involve even more integration with emerging technologies. With the rise of virtual and augmented reality, hyperlinks could transform
+                into spatial navigational tools, guiding users through three-dimensional spaces and linking virtual objects to information and experiences.
+            </p>
+            <hr class="sec_hr"> 
+            <h3>Applications of HyperLinks:</h3>
+            <p>The arrangement and display of information have also changed as a result of the usage of hyperlinks. Linkages were first used by websites to build user-friendly 
+               navigation systems that made it simple for visitors to find the information they needed. Search engines, which index the web by following links from one website to 
+               another, rely heavily on hyperlinks these days. Due to the fact that a page's ranking in search results is mostly determined by the quantity and quality of links pointing
+               to it, hyperlinks have become essential for search engine optimization (SEO).
+            </p>
+            <p>
+                In addition to their functional role, hyperlinks have also played a part in the aesthetic design of web pages. Designers use hyperlinks to guide users' attention to 
+                important areas of a page and to create a visual hierarchy. The styling of hyperlinks, such as colour and underlining, has become a key aspect of web design, indicating
+                to users that a text or image is clickable.
+            </p>
+            <p>
+                Press the button to reveal some of real-world applications:
+            </p>
+            <button id="reveal" onclick="div_block_reveal()">Reveal</button>
+            <div class="five_block">
+                <div hidden>
+                   <h3>Navigational Aid:</h3>
+                   <img src="https://cdn-icons-png.flaticon.com/128/4254/4254068.png" alt="asd" height="64" width="64">
+                   <p>
+                    Hyperlinks serve as doorways to additional content, allowing users to navigate through different sections of a presentation or document.
+                    They can link to other slides in a presentation, a web page, another file, or even trigger the creation of a new document.                     
+                   </p> 
+                </div>
+                <div hidden>
+                    <h3>Enhancing Engagement:</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/128/1536/1536550.png" alt="asd" height="64" width="64">
+                    <p>
+                        Hyperlinks encourage users to interact with the content, making it more engaging. Instead of presenting all information on a single screen,
+                        you can use hyperlinks to distribute content across multiple slides or pages. This allows users to click on a button, picture, or text to access additional information.
+                    </p>
+                </div>
+                <div hidden>
+                    <h3>Organizing Content:</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/128/483/483914.png" alt="asd" height="64" width="64">
+                    <p>
+                        Hyperlinks can help structure your presentation or document. You can select the main points and use hyperlinks
+                        to expand on them with supporting material. This helps in presenting a clear, well-structured delivery.
+                    </p>
+                </div>
+                <div hidden>
+                    <h3>Illustration and Clarification:</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/128/15252/15252254.png" alt="asd" height="64" width="64">
+                    <p>
+                        Hyperlinks can be used to reference source material, job aids, and other supporting documentation.
+                        They can also be used to enrich a user’s experience by referencing illustrations or examples that expand, clarify, or simplify the content.
+                    </p>
+                </div>
+                <div hidden>
+                    <h3>Creating Interactive Experiences:</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/128/653/653677.png" alt="asd" height="64" width="64">
+                    <p>
+                        With hyperlinks, you can create simple branched scenarios and other interactive experiences.
+                        For example, in a PowerPoint presentation, you can use hyperlinks to jump to other slides based on user interaction.
+                    </p>
+                </div>
+            </div>
+            <hr class="sec_hr"> 
+            <h3>Conclusion:</h3>
+            <p>
+                In conclusion, hyperlinks have been a key technology in the development of the internet and digital communication.
+                They have revolutionized the way we present and organize information, making the vast resources of the web accessible and navigable.
+                From their conceptual beginnings to their current widespread use, hyperlinks continue to be an essential element of the digital landscape,
+                shaping how we connect ideas and information across the globe.
+            </p>
+            <hr class="sec_hr">
+        </div>
+        <hr class="sec_hr">
+        <!------------------------------------------------------------------------------------------------End of Section2--------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------Beginning of Section3------------------------------------------------------------------------------------------->
+        <h2 id="section3"> 3.Portfolio</h2>
+        <div class = "s3">
+            <hr class="sec_hr">
+            <div class="row">
+                <div class="left">
+                   <h3>Photo of me:</h3> 
+                   <img id="me" src="https://mir-s3-cdn-cf.behance.net/user/276/8064c1439598783.5f3132f47cbb7.jpg" alt="Me" height="300" width="300">
+                   <p>
+                    Hi! My name is Adharsh Sundaram Soudakar. I am an international student pursuing Masters in IT.
+                    I am a very disciplined person and I love working out.
+                    I am very time conscious as well.
+                    Infact, to accommodate time for everything else, I go to the gym very early in the morning.
+                    I aspire to be like David Goggins and Jocko Willink, their mental fortitude and physical capacity.
+                    My favourite quote, "There's only one way to go when you hit rock bottom...UP!"                
+                    </p>
+                    <h3>Things I love:</h3>  
+                    <div class="things">
+                        <img src="https://cdn-icons-png.flaticon.com/128/563/563828.png" alt="gym" height="64" width="64">
+                        <p><a href="https://www.instagram.com/p/C5M7wNDSRsO/" target="_blank">GYM</a></p>
+                    </div>
+                    <div class="things">
+                        <img src="https://cdn-icons-png.flaticon.com/128/727/727218.png" alt="song" height="64" width="64">
+                        <p><a href="https://youtu.be/cZAw8qxn0ZE?si=1FfY7YgEVUbO4BMQ" target="_blank">MY SONG</a></p>
+                    </div> 
+                    <div class="things">
+                        <img src="https://cdn-icons-png.flaticon.com/128/15427/15427945.png" alt="anime" height="64" width="64">
+                        <p><a href="https://www.crunchyroll.com/series/GRQ4QG4GY/gto---the-animation" target="_blank">ANIME</a></p>
+                    </div>
+                </div>
+                <div class="middle">
+                    <h3>Boring stuff:</h3>
+                    <h3>Education:</h3>
+                    <p>I have a bachelors degree in Engineering majoring in Electrical and Electronics Engineering from Anna University, CGPA: 8.5 (First class with Distinction).</p>
+                    <p>In my final year, my team and I, we developed a protoype that inspired our project guide. So, he asked us to apply a patent for the same.</p>
+                    <img id = "patent" src="https://media.licdn.com/dms/image/D5622AQF_AQF--bYpYQ/feedshare-shrink_1280/0/1682740276694?e=1715817600&v=beta&t=jxaGj6KatgORaHIWgEc7OEOVMaBqKihGZIbTovk_Yzo" alt="patent_register" width="500">
+                    <p>Organised several college and department events and was also part of the University's Western Dance Team (N2K).</p>
+                    <p>Currently pursuing Masters in IT at UWA, WAM: 81.</p>
+                    <h3>WorK Experience:</h3>
+                    <p>I got recruited by LTIMindtree on August, 2017 as GET (Graduate Engineering Trainee).</p>
+                    <p>After 2 months of training and a <a href="https://www.credly.com/badges/b9a26108-2a90-4efe-a4dc-a6bd8df77c6b?source=linked_in_profile" target="_blank">certification</a>: JAVA SE 11 Developer, I was made permanent as Senior Software Engineer.</p>
+                    <p>I was part of a ICT team that worked on resolving tickets. I worked here for 1.5 years.</p>
+                </div>
+                <div class="right">
+                    <p>I have included a digital clock and my schedule just in case!</p>
+                    <h2 id="time"></h2>
+                    <h3>My schedule:</h3>
+                    <table>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                        </tr>
+                        <tr>
+                            <td>3:30AM - 4:00AM</td>
+                            <td>Wake up</td>
+                        </tr>
+                        <tr>
+                            <td>5:00AM</td>
+                            <td>Gym</td>
+                        </tr>
+                        <tr>
+                            <td>7:00AM</td>
+                            <td>Get back home</td>
+                        </tr>
+                        <tr>
+                            <td>7:30AM</td>
+                            <td>Leave for work</td>
+                        </tr>
+                        <tr>
+                            <td>8:30AM</td>
+                            <td>Start my shift</td>
+                        </tr>
+                        <tr>
+                            <td>1:30PM</td>
+                            <td>End my shift</td>
+                        </tr>
+                        <tr>
+                            <td>2:15PM</td>
+                            <td>Back home</td>
+                        </tr>
+                        <tr>
+                            <td>3:00PM - 8:00PM</td>
+                            <td>Assignments, class, and study</td>
+                        </tr>
+                        <tr>
+                            <td>9:00PM - 10:00PM</td>
+                            <td>Me time: Relax, get ready for next day</td>
+                        </tr>
+                        <tr>
+                            <td>10:30PM</td>
+                            <td>Bed time</td>
+                        </tr>
+                    </table>
+                    <h3>Socials:</h3>  
+                    <div class="thingsr">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="linkedin" height="64" width="64">
+                        <p><a href="https://www.linkedin.com/in/adharsh-sundaram-soudakar/" target="_blank">LinkedIn</a></p>
+                    </div>
+                    <div class="thingsr">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="gym" height="64" width="64">
+                        <p><a href="https://www.instagram.com/adharsh_sundaram/" target="_blank">Instagram</a></p>
+                    </div> 
+                    <div id="thing_cus">
+                        <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" alt="email" height="64" width="64">
+                        <p>adharsh136@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="sec_hr">
+        </div>
+        <hr class="sec_hr">
+        <!-----------------------------------------------------------------------------------------------End of Section3---------------------------------------------------------------------------------------------------->
+        <!-----------------------------------------------------------------------------------------------Footer----------------------------------------------------------------------------------------------------------->
+        <h2 id="references">References</h2>
+        <div class="footer">
+            <div>
+                <h3>Images</h3>
+                <a href="https://www.flaticon.com" target="_blank">Flaticons</a>
+                <br>
+                <a href="https://www.behance.net/adharshsundaram" target="_blank">Behance - my picture</a>
+                <br>
+                <a href="https://www.linkedin.com/in/adharsh-sundaram-soudakar/" target="_blank">LinkedIn - patent</a>
+                <br>
+                <a href="https://derivadow.com/2007/01/05/ajax-what-is-it-its-not-dhtml/" target="_blank">AJAX</a>
+                <br>
+                <a href="https://www.helpshift.com/a-comprehensive-guide-to-deep-linking-making-it-work-for-your-mobile-app/" target="_blank">DeepLink</a>
+                <br>
+                <a href="https://www.teach-ict.com/gcse_new/software/web_design/miniweb/pg6.htm" target="_blank">HTML and WWW</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks" target="_blank">Text-Based Hyperlinks</a>
+                <br>
+                <a href="https://www.bbvaopenmind.com/en/technology/visionaries/tim-berners-lee-and-the-birth-of-the-web/" target="_blank">Tim Berners-Lee</a>
+                <br>
+                <a href="https://hisaac.net/project-xanadu/" target="_blank">Ted Nelson</a>
+                <br>
+                <a href="https://www.knownhost.com/blog/how-do-web-servers-work/" target="_blank">Brower-side/Server-side</a>
+                <br>
+                <a href="https://www.computerhope.com/jargon/h/html-a-tag.htm" target="_blank">HTML &lt;a&gt; tag</a>
+                <br>
+                <a href="https://www.memedroid.com/memes/detail/2419687/Hyperlink-for-smash" target="_blank">Meme</a>
+            </div>
+            <div>
+                <h3>Code</h3>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a>
+                <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">MDN</a>
+            </div>
+            <div>
+                <h3>Content</h3>
+                <a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank">WIKIPEDIA - HyperLink</a>
+                <br>
+                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">WIKIPEDIA - HTML</a>
+                <br>
+                <a href="https://www.w3.org/People/Raggett/book4/ch02.html" target="_blank">World Wide Web Consortium</a>
+                <br>
+                <a href="https://community.articulate.com/articles/why-and-how-to-use-hyperlinks-in-powerpoint" target="_blank">Applications</a>
+            </div>
+        </div>
+        <!--Adding script at the end to avoid scripts stopping browser from parsing the HTML (if any errors/mistakes in JS)-->
+        <script src="23796349.js"></script>
+    </Body> 
+</html>
